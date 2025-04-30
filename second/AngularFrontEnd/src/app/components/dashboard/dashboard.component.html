@@ -1,0 +1,21 @@
+<table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>Name</th>
+      <th>Last Name</th>
+      <th>Address</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.idUser}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.address}}</td>
+      <td><button class="btn btn-primary" [routerLink]="['/updateuser', user.idUser]">Edit</button></td>
+      <!-- <td><button class="btn btn-primary" (click)="editUser(user.idUser)">Edit</button></td> -->
+    </tr>
+  </tbody>
+</table>
